@@ -1,0 +1,7 @@
+a=str(input("Digite seu usuário: "))
+b=str(input("Digite sua senha: "))
+
+p=[a,b,a.upper,a.lower]
+while b in p:
+       print("Sua senha não pode ser a mesma do seu usuário")
+       b=str(input("Digite sua senha: "))
