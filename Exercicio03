@@ -1,0 +1,20 @@
+name=input("Digite um nome: ")
+age =input("Digite a idade: ")
+wage =input("Digite o salário: ")
+sex =input("Digite o sexo: F - Feminino ou M - Masculino: ")
+cstate = input("Digite o estado civil: D - Divorciado, C - Casado, S - Solteiro ou V - Viúvo: ")
+
+while len(name) <= 3:
+    print("Nome inválido")
+    name=input("Digite um nome: ")
+while int(age) < 0 or int(age) > 150:
+    print("Idade inválida")
+    age =input("Digite a idade: ")
+while sex not in ("m", "M", "F", "f"):
+    print("Gênero inválido")
+    sex =input("Digite o sexo: F - Feminino ou M - Masculino: ")
+while cstate not in ("C", "c", "D", "d", "S", "s", "V", "v"):
+    print("Estado civil inválido")
+    cstate = input("Digite o estado civil: D - Divorciado, C - Casado, S - Solteiro ou V - Viúvo: ")
+
+print("Você digitou todos os dados corretamente")
