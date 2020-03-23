@@ -1,0 +1,12 @@
+popa = 80000
+popb = 200000
+ratea = 0.03
+rateb = 0.015
+k=0
+while popa < popb:
+	k=k+1
+	popa+= ratea*k
+	popb += rateb*k
+	if popa > popb:
+		print(popa)
+		print("Demorou"+str(k)+"dias para a população de A superar a população de B")
