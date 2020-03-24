@@ -1,0 +1,7 @@
+k=int(input("Informe um número: "))
+p=int(input("Informe um número: "))
+
+l=[k,p]
+l.sort(reverse=False)
+for i in range(l[0],l[1]):
+    print(i)
