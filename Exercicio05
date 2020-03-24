@@ -1,0 +1,23 @@
+sair = 0
+while sair not in ('sair', 'Sair', 's', 'S', 'quit', 'exit', 'sim', 'SIM', 'Sim'):
+    popa = input("Digite a população da cidade A: ")
+    popb = input("Digite a população da cidade B: ")
+    ratea = input("Digite a taxa de crescimento da cidade A: ")
+    while int(ratea) <= 0:
+        ratea = input("Taxa de crescimento inválida, digite a taxa de crescimento da cidade A: ")
+    rateb = input("Digite a taxa de crescimento da cidade B: ")
+    while int(rateb) <= 0:
+        rateb = input("Taxa de crescimento inválida, digite a taxa de crescimento da cidade B: ")
+    k=0
+    if int(popa) > int(popb):
+        print("A população da cidade A já é maior que a da cidade B")
+    if int(ratea) < int(rateb) and int(popa) < int(popb):
+        print("A população da cidade A nunca será maior que da cidade B")
+    if int(ratea) > int(rateb):
+        while int(popa) < int(popb):
+                k=k+1
+                popa= int(popa)*int(ratea)*k
+                popb= int(popb)*int(rateb)*k
+                if popa > popb:
+                        print("Demorou "+str(k)+" dias para a população de A superar a população de B")
+    sair = input("Deseja sair? ")
