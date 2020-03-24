@@ -1,0 +1,11 @@
+k=[]
+p=0
+for i in range(5):
+    k.append(0)
+    k[i]=int(input("Digite um número: "))
+    p=p+k[i]
+    m=p/len(k)
+k.sort(reverse=True)
+print("O maior valor é "+str(k[0]))
+print("A soma é: " + str(p))
+print("A média é: " + str(m))
