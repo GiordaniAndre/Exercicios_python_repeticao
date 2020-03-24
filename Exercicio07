@@ -1,0 +1,6 @@
+k=[]
+for i in range(5):
+    k.append(0)
+    k[i]=int(input("Digite um número: "))
+k.sort(reverse=True)
+print(k[0])
